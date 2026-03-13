@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オセロカメラAI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2d3748;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .features {
+            margin: 30px 0;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+        .feature-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #007AFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,122,255,0.4);
+        }
+        .download-button:hover {
+            background: #0051D5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,122,255,0.6);
+        }
+        .links {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📷 オセロカメラAI</h1>
+        <p class="subtitle">盤面を撮るだけで、AIが最善手を提案</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📸</div>
+                <div>
+                    <strong>カメラで盤面を自動認識</strong><br>
+                    四隅をタップするだけで高精度に認識
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <div>
+                    <strong>AIが最善手を3候補提案</strong><br>
+                    角取り・辺確保など戦略的な手を表示
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div>
+                    <strong>形勢グラフで優劣を可視化</strong><br>
+                    現在の盤面が有利か不利かを一目で確認
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💡</div>
+                <div>
+                    <strong>AI解説で戦略を学習</strong><br>
+                    なぜその手が良いのかを理解できる
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>今すぐダウンロード</h2>
+            <a href="https://apps.apple.com/jp/app/%E3%82%AA%E3%82%BB%E3%83%AD%E3%82%AB%E3%83%A1%E3%83%A9ai/id6760019349" class="download-button">
+                App Store からダウンロード
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="https://forms.gle/AkNo2qzy4BRpaw2C8">お問い合わせ</a>
+            <a href="https://pastebin.com/ここにあなたのURL">プライバシーポリシー</a>
+        </div>
+    </div>
+</body>
+</html>
