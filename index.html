@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>オセロカメラAI</title>
+    <title>Othello Camera AI / オセロカメラAI</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -18,6 +18,25 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            padding: 6px 14px;
+            border: 1.5px solid #667eea;
+            border-radius: 20px;
+            background: white;
+            color: #667eea;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .lang-btn:hover {
+            background: #667eea;
+            color: white;
         }
         h1 {
             color: #2d3748;
@@ -45,10 +64,24 @@
         .feature-icon {
             font-size: 2em;
             margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .feature strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #2d3748;
+        }
+        .feature span {
+            color: #718096;
+            font-size: 0.95em;
         }
         .download-section {
             text-align: center;
             margin: 40px 0;
+        }
+        .download-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
         }
         .download-button {
             display: inline-block;
@@ -81,55 +114,86 @@
         .links a:hover {
             text-decoration: underline;
         }
+        .en { display: none; }
+        .ja { display: block; }
+        body.lang-en .en { display: block; }
+        body.lang-en .ja { display: none; }
+        /* inline elements */
+        span.en { display: none; }
+        span.ja { display: inline; }
+        body.lang-en span.en { display: inline; }
+        body.lang-en span.ja { display: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📷 オセロカメラAI</h1>
-        <p class="subtitle">盤面を撮るだけで、AIが最善手を提案</p>
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="toggleLang()">
+                <span class="ja">English</span>
+                <span class="en">日本語</span>
+            </button>
+        </div>
+
+        <h1>📷 <span class="ja">オセロカメラAI</span><span class="en">Othello Camera AI</span></h1>
+        <p class="subtitle">
+            <span class="ja">盤面を撮るだけで、AIが最善手を提案</span>
+            <span class="en">Just take a photo of the board — AI suggests the best moves</span>
+        </p>
 
         <div class="features">
             <div class="feature">
                 <div class="feature-icon">📸</div>
                 <div>
-                    <strong>カメラで盤面を自動認識</strong><br>
-                    四隅をタップするだけで高精度に認識
+                    <strong><span class="ja">カメラで盤面を自動認識</span><span class="en">Auto-detect board from camera</span></strong>
+                    <span><span class="ja">四隅をタップするだけで高精度に認識</span><span class="en">Tap the four corners for high-accuracy detection</span></span>
                 </div>
             </div>
             <div class="feature">
                 <div class="feature-icon">🤖</div>
                 <div>
-                    <strong>AIが最善手を3候補提案</strong><br>
-                    角取り・辺確保など戦略的な手を表示
+                    <strong><span class="ja">AIが最善手を3候補提案</span><span class="en">AI suggests top 3 best moves</span></strong>
+                    <span><span class="ja">角取り・辺確保など戦略的な手を表示</span><span class="en">Shows strategic moves including corner and edge captures</span></span>
                 </div>
             </div>
             <div class="feature">
                 <div class="feature-icon">📊</div>
                 <div>
-                    <strong>形勢グラフで優劣を可視化</strong><br>
-                    現在の盤面が有利か不利かを一目で確認
+                    <strong><span class="ja">形勢グラフで優劣を可視化</span><span class="en">Visualize advantage with a score graph</span></strong>
+                    <span><span class="ja">現在の盤面が有利か不利かを一目で確認</span><span class="en">See at a glance whether you are winning or losing</span></span>
                 </div>
             </div>
             <div class="feature">
                 <div class="feature-icon">💡</div>
                 <div>
-                    <strong>AI解説で戦略を学習</strong><br>
-                    なぜその手が良いのかを理解できる
+                    <strong><span class="ja">AI解説で戦略を学習</span><span class="en">Learn strategy with AI explanations</span></strong>
+                    <span><span class="ja">なぜその手が良いのかを理解できる</span><span class="en">Understand why each move is the optimal choice</span></span>
                 </div>
             </div>
         </div>
 
         <div class="download-section">
-            <h2>今すぐダウンロード</h2>
+            <h2><span class="ja">今すぐダウンロード</span><span class="en">Download Now</span></h2>
             <a href="https://apps.apple.com/jp/app/%E3%82%AA%E3%82%BB%E3%83%AD%E3%82%AB%E3%83%A1%E3%83%A9ai/id6760019349" class="download-button">
-                App Store からダウンロード
+                <span class="ja">App Store からダウンロード</span>
+                <span class="en">Download on the App Store</span>
             </a>
         </div>
 
         <div class="links">
-            <a href="https://forms.gle/AkNo2qzy4BRpaw2C8">お問い合わせ</a>
-            <a href="https://pastebin.com/J0ZDxvg2">プライバシーポリシー</a>
+            <a href="https://forms.gle/AkNo2qzy4BRpaw2C8">
+                <span class="ja">お問い合わせ</span><span class="en">Contact</span>
+            </a>
+            <a href="https://pastebin.com/J0ZDxvg2">
+                <span class="ja">プライバシーポリシー</span><span class="en">Privacy Policy</span>
+            </a>
         </div>
     </div>
+
+    <script>
+        function toggleLang() {
+            const isEn = document.body.classList.toggle('lang-en');
+            document.documentElement.lang = isEn ? 'en' : 'ja';
+        }
+    </script>
 </body>
 </html>
